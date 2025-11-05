@@ -1,4 +1,11 @@
+"use client"
+
+import HomeModal from "@/components/HomeModal";
+import { useState } from "react"
+
 export default function HomePage() {
+    const [displayModal, setDisplayModal] = useState(true);
+
     return <div className="">
         
         <div className="flex flex-row justify-between bg-gray-200">
@@ -14,5 +21,6 @@ export default function HomePage() {
         <div>Groups</div>
         <div className="h-56 bg-gray-300">Group Section</div>
         
+        {displayModal && <HomeModal setDisplay={setDisplayModal}/>}
     </div>
 }
